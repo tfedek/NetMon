@@ -29,8 +29,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $stmt->bindParam(':token', $token,      PDO::PARAM_STR);
             $stmt->execute();
 
+            #$sent = send_reset_email($email, $user['full_name'], $token);
             $sent = send_reset_email($email, $user['full_name'], $token);
-
+            if (!$sent) {
+                error_log('MAIL FAILED for: ' . $email);
+            } else {
+                error_log('MAIL SENT to: ' . $email);
+            }
             // Loguj neuspelo slanje u bazu (profesorov addEmailFailure pattern)
             if (!$sent) {
                 log_email_failure($db, (int)$user['id'],
