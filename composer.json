@@ -1,0 +1,22 @@
+{
+    "name": "netmon/network-monitor",
+    "description": "Network Location Availability Monitoring System",
+    "type": "project",
+    "license": "MIT",
+    "require": {
+        "php": ">=8.1",
+        "phpmailer/phpmailer": "^6.9",
+        "mobiledetect/mobiledetectlib": "^2.8"
+    },
+    "require-dev": {
+        "fakerphp/faker": "^1.23"
+    },
+    "autoload": {
+        "psr-4": {
+            "NetMon\\": "src/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true
+    }
+}

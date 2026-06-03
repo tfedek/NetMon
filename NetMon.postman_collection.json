@@ -1,0 +1,1092 @@
+{
+  "info": {
+    "_postman_id": "21f5daec-073e-4403-be73-55a3cd8d685f",
+    "name": "NetMon",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "54434586",
+    "_collection_link": "https://go.postman.co/collection/54434586-21f5daec-073e-4403-be73-55a3cd8d685f?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Token",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"tomislav.fedek@maxbet.rs\",\n  \"password\": \"Papaja1.\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}api/auth/token",
+          "host": [
+            "{{base_url}}api"
+          ],
+          "path": [
+            "auth",
+            "token"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Token",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"tomislav.fedek@maxbet.rs\",\n  \"password\": \"Papaja1.\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}api/auth/token",
+              "host": [
+                "{{base_url}}api"
+              ],
+              "path": [
+                "auth",
+                "token"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Date",
+              "value": "Fri, 29 May 2026 07:02:40 GMT"
+            },
+            {
+              "key": "Server",
+              "value": "Apache/2.4.56 (Unix) OpenSSL/1.1.1t PHP/8.2.4 mod_perl/2.0.12 Perl/v5.34.1"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "strict-origin-when-cross-origin"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "strict-origin-when-cross-origin"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.2.4"
+            },
+            {
+              "key": "Expires",
+              "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-store, no-cache, must-revalidate"
+            },
+            {
+              "key": "Pragma",
+              "value": "no-cache"
+            },
+            {
+              "key": "Content-Security-Policy",
+              "value": "default-src 'self'; script-src 'self' 'nonce-oIfByf5rkwS/vHI40NsNVQ==' https://cdn.jsdelivr.net; style-src 'self' 'nonce-oIfByf5rkwS/vHI40NsNVQ==' https://cdn.jsdelivr.net https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net; img-src 'self' data: https:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';"
+            },
+            {
+              "key": "X-XSS-Protection",
+              "value": "1; mode=block"
+            },
+            {
+              "key": "Permissions-Policy",
+              "value": "geolocation=(), camera=(), microphone=()"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Access-Control-Allow-Methods",
+              "value": "GET, POST, PUT, DELETE, OPTIONS, PATCH"
+            },
+            {
+              "key": "Access-Control-Allow-Headers",
+              "value": "Authorization, Content-Type, X-CSRF-Token"
+            },
+            {
+              "key": "Content-Length",
+              "value": "463"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5, max=100"
+            },
+            {
+              "key": "Connection",
+              "value": "Keep-Alive"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=UTF-8"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Token issued.\",\n    \"data\": {\n        \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsIm5hbWUiOiJUb21pc2xhdiBGZWRlayIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc4MDAzODE2MCwiZXhwIjoxNzgwMDQxNzYwfQ.w0G7Sv1-NO44iAK0RSO5ygdhzixe1ukVgsZOOY2f5aQ\",\n        \"token_type\": \"Bearer\",\n        \"expires_in\": 3600,\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"Tomislav Fedek\",\n            \"role\": \"admin\"\n        }\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "Spisak Lokacija",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsIm5hbWUiOiJUb21pc2xhdiBGZWRlayIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc4MDAzODE2MCwiZXhwIjoxNzgwMDQxNzYwfQ.w0G7Sv1-NO44iAK0RSO5ygdhzixe1ukVgsZOOY2f5aQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/locations",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "locations"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Spisak Lokacija",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/locations",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "locations"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Date",
+              "value": "Fri, 29 May 2026 07:03:31 GMT"
+            },
+            {
+              "key": "Server",
+              "value": "Apache/2.4.56 (Unix) OpenSSL/1.1.1t PHP/8.2.4 mod_perl/2.0.12 Perl/v5.34.1"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "strict-origin-when-cross-origin"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "strict-origin-when-cross-origin"
+            },
+            {
+              "key": "Vary",
+              "value": "Authorization"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.2.4"
+            },
+            {
+              "key": "Expires",
+              "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-store, no-cache, must-revalidate"
+            },
+            {
+              "key": "Pragma",
+              "value": "no-cache"
+            },
+            {
+              "key": "Content-Security-Policy",
+              "value": "default-src 'self'; script-src 'self' 'nonce-cdOxdmL/q3rzrjofloauQg==' https://cdn.jsdelivr.net; style-src 'self' 'nonce-cdOxdmL/q3rzrjofloauQg==' https://cdn.jsdelivr.net https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net; img-src 'self' data: https:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';"
+            },
+            {
+              "key": "X-XSS-Protection",
+              "value": "1; mode=block"
+            },
+            {
+              "key": "Permissions-Policy",
+              "value": "geolocation=(), camera=(), microphone=()"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Access-Control-Allow-Methods",
+              "value": "GET, POST, PUT, DELETE, OPTIONS, PATCH"
+            },
+            {
+              "key": "Access-Control-Allow-Headers",
+              "value": "Authorization, Content-Type, X-CSRF-Token"
+            },
+            {
+              "key": "Content-Length",
+              "value": "5068"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5, max=100"
+            },
+            {
+              "key": "Connection",
+              "value": "Keep-Alive"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=UTF-8"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"OK\",\n    \"data\": {\n        \"locations\": [\n            {\n                \"id\": 11,\n                \"user_id\": 12,\n                \"name\": \"VTŠ glavni sajt\",\n                \"host\": \"vts.su.ac.rs\",\n                \"port\": 443,\n                \"protocol\": \"https\",\n                \"description\": \"Monitoring node for VTŠ glavni sajt\",\n                \"is_active\": 1,\n                \"status\": \"online\",\n                \"last_checked\": \"2026-05-26 09:28:03\",\n                \"created_at\": \"2026-05-26 09:28:03\",\n                \"updated_at\": \"2026-05-26 09:28:03\"\n            },\n            {\n                \"id\": 12,\n                \"user_id\": 12,\n                \"name\": \"VTŠ HTTP redirect\",\n                \"host\": \"vts.su.ac.rs\",\n                \"port\": 80,\n                \"protocol\": \"http\",\n                \"description\": \"Monitoring node for VTŠ HTTP redirect\",\n                \"is_active\": 1,\n                \"status\": \"online\",\n                \"last_checked\": \"2026-05-26 09:28:03\",\n                \"created_at\": \"2026-05-26 09:28:03\",\n                \"updated_at\": \"2026-05-26 09:28:03\"\n            },\n            {\n                \"id\": 13,\n                \"user_id\": 12,\n                \"name\": \"Moodle platforma\",\n                \"host\": \"moodle2.vts.su.ac.rs\",\n                \"port\": 443,\n                \"protocol\": \"https\",\n                \"description\": \"Monitoring node for Moodle platforma\",\n                \"is_active\": 1,\n                \"status\": \"online\",\n                \"last_checked\": \"2026-05-26 09:28:03\",\n                \"created_at\": \"2026-05-26 09:28:03\",\n                \"updated_at\": \"2026-05-26 09:28:03\"\n            },\n            {\n                \"id\": 14,\n                \"user_id\": 12,\n                \"name\": \"Webmail\",\n                \"host\": \"webmail.su.ac.rs\",\n                \"port\": 443,\n                \"protocol\": \"https\",\n                \"description\": \"Monitoring node for Webmail\",\n                \"is_active\": 1,\n                \"status\": \"unknown\",\n                \"last_checked\": \"2026-05-26 09:28:03\",\n                \"created_at\": \"2026-05-26 09:28:03\",\n                \"updated_at\": \"2026-05-26 09:28:03\"\n            },\n            {\n                \"id\": 15,\n                \"user_id\": 12,\n                \"name\": \"Mail SMTP\",\n                \"host\": \"mail.su.ac.rs\",\n                \"port\": 25,\n                \"protocol\": \"tcp\",\n                \"description\": \"Monitoring node for Mail SMTP\",\n                \"is_active\": 1,\n                \"status\": \"unknown\",\n                \"last_checked\": \"2026-05-26 09:28:03\",\n                \"created_at\": \"2026-05-26 09:28:03\",\n                \"updated_at\": \"2026-05-26 09:28:03\"\n            },\n            {\n                \"id\": 16,\n                \"user_id\": 12,\n                \"name\": \"Bulevar Nikole Pašića 28\",\n                \"host\": \"192.168.111.38\",\n                \"port\": 22,\n                \"protocol\": \"https\",\n                \"description\": \"Monitoring node for Bulevar Nikole Pašića 28\",\n                \"is_active\": 1,\n                \"status\": \"unknown\",\n                \"last_checked\": \"2026-05-26 09:28:03\",\n                \"created_at\": \"2026-05-26 09:28:03\",\n                \"updated_at\": \"2026-05-26 09:28:03\"\n            },\n            {\n                \"id\": 17,\n                \"user_id\": 12,\n                \"name\": \"Kralja Milana 92\",\n                \"host\": \"10.66.0.207\",\n                \"port\": 22,\n                \"protocol\": \"https\",\n                \"description\": \"Monitoring node for Kralja Milana 92\",\n                \"is_active\": 1,\n                \"status\": \"online\",\n                \"last_checked\": \"2026-05-26 09:28:03\",\n                \"created_at\": \"2026-05-26 09:28:03\",\n                \"updated_at\": \"2026-05-26 09:28:03\"\n            },\n            {\n                \"id\": 18,\n                \"user_id\": 12,\n                \"name\": \"Nikole Pašića 25\",\n                \"host\": \"192.168.232.209\",\n                \"port\": 3306,\n                \"protocol\": \"http\",\n                \"description\": \"Monitoring node for Nikole Pašića 25\",\n                \"is_active\": 1,\n                \"status\": \"online\",\n                \"last_checked\": \"2026-05-26 09:28:03\",\n                \"created_at\": \"2026-05-26 09:28:03\",\n                \"updated_at\": \"2026-05-26 09:28:03\"\n            },\n            {\n                \"id\": 19,\n                \"user_id\": 12,\n                \"name\": \"Bulevar Cara Dušana 62\",\n                \"host\": \"10.50.58.235\",\n                \"port\": 8080,\n                \"protocol\": \"http\",\n                \"description\": \"Monitoring node for Bulevar Cara Dušana 62\",\n                \"is_active\": 1,\n                \"status\": \"online\",\n                \"last_checked\": \"2026-05-26 09:28:03\",\n                \"created_at\": \"2026-05-26 09:28:03\",\n                \"updated_at\": \"2026-05-26 09:28:03\"\n            }\n        ],\n        \"pagination\": {\n            \"total\": 9,\n            \"page\": 1,\n            \"per_page\": 20,\n            \"pages\": 1\n        }\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "Kreiranje example.com lokacije",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsIm5hbWUiOiJUb21pc2xhdiBGZWRlayIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3OTc4MDg5OSwiZXhwIjoxNzc5Nzg0NDk5fQ.8pcG4Q-P-4KacaiiH_rsfbOHwPcijXYDXZqhuOG2gL0",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Test Server\",\n  \"host\": \"example.com\",\n  \"port\": 80,\n  \"protocol\": \"http\",\n  \"description\": \"test\",\n  \"is_active\": 1\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/locations",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "locations"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Kreiranje example.com lokacije",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Test Server\",\n  \"host\": \"example.com\",\n  \"port\": 80,\n  \"protocol\": \"http\",\n  \"description\": \"test\",\n  \"is_active\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/locations",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "locations"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Date",
+              "value": "Fri, 29 May 2026 07:03:50 GMT"
+            },
+            {
+              "key": "Server",
+              "value": "Apache/2.4.56 (Unix) OpenSSL/1.1.1t PHP/8.2.4 mod_perl/2.0.12 Perl/v5.34.1"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "strict-origin-when-cross-origin"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "strict-origin-when-cross-origin"
+            },
+            {
+              "key": "Vary",
+              "value": "Authorization"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.2.4"
+            },
+            {
+              "key": "Expires",
+              "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-store, no-cache, must-revalidate"
+            },
+            {
+              "key": "Pragma",
+              "value": "no-cache"
+            },
+            {
+              "key": "Content-Security-Policy",
+              "value": "default-src 'self'; script-src 'self' 'nonce-vw1JhiWsITAJ8HcKehg6hA==' https://cdn.jsdelivr.net; style-src 'self' 'nonce-vw1JhiWsITAJ8HcKehg6hA==' https://cdn.jsdelivr.net https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net; img-src 'self' data: https:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';"
+            },
+            {
+              "key": "X-XSS-Protection",
+              "value": "1; mode=block"
+            },
+            {
+              "key": "Permissions-Policy",
+              "value": "geolocation=(), camera=(), microphone=()"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Access-Control-Allow-Methods",
+              "value": "GET, POST, PUT, DELETE, OPTIONS, PATCH"
+            },
+            {
+              "key": "Access-Control-Allow-Headers",
+              "value": "Authorization, Content-Type, X-CSRF-Token"
+            },
+            {
+              "key": "Content-Length",
+              "value": "433"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5, max=100"
+            },
+            {
+              "key": "Connection",
+              "value": "Keep-Alive"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=UTF-8"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Location created.\",\n    \"data\": {\n        \"id\": 23,\n        \"user_id\": 1,\n        \"name\": \"Test Server\",\n        \"host\": \"example.com\",\n        \"port\": 80,\n        \"protocol\": \"http\",\n        \"description\": \"test\",\n        \"is_active\": 1,\n        \"status\": \"unknown\",\n        \"last_checked\": null,\n        \"created_at\": \"2026-05-29 09:03:50\",\n        \"updated_at\": \"2026-05-29 09:03:50\"\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "Izmena imena i porta nove lokacije",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsIm5hbWUiOiJUb21pc2xhdiBGZWRlayIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc4MDAzNzY4MiwiZXhwIjoxNzgwMDQxMjgyfQ.d3i6kSjH1Z5pGfj2_vDaCmlr9L61X6JGIJlwz8PgrRk",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"BUEP 2026\",\n  \"port\": 8080\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/locations/21",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "locations",
+            "21"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Izmena imena i porta nove lokacije",
+          "originalRequest": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"BUEP 2026\",\n  \"port\": 8080\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/locations/23",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "locations",
+                "23"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Date",
+              "value": "Fri, 29 May 2026 07:04:03 GMT"
+            },
+            {
+              "key": "Server",
+              "value": "Apache/2.4.56 (Unix) OpenSSL/1.1.1t PHP/8.2.4 mod_perl/2.0.12 Perl/v5.34.1"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "strict-origin-when-cross-origin"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "strict-origin-when-cross-origin"
+            },
+            {
+              "key": "Vary",
+              "value": "Authorization"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.2.4"
+            },
+            {
+              "key": "Expires",
+              "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-store, no-cache, must-revalidate"
+            },
+            {
+              "key": "Pragma",
+              "value": "no-cache"
+            },
+            {
+              "key": "Content-Security-Policy",
+              "value": "default-src 'self'; script-src 'self' 'nonce-J/bWT58Csme5gJEFdltaxA==' https://cdn.jsdelivr.net; style-src 'self' 'nonce-J/bWT58Csme5gJEFdltaxA==' https://cdn.jsdelivr.net https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net; img-src 'self' data: https:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';"
+            },
+            {
+              "key": "X-XSS-Protection",
+              "value": "1; mode=block"
+            },
+            {
+              "key": "Permissions-Policy",
+              "value": "geolocation=(), camera=(), microphone=()"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Access-Control-Allow-Methods",
+              "value": "GET, POST, PUT, DELETE, OPTIONS, PATCH"
+            },
+            {
+              "key": "Access-Control-Allow-Headers",
+              "value": "Authorization, Content-Type, X-CSRF-Token"
+            },
+            {
+              "key": "Content-Length",
+              "value": "433"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5, max=100"
+            },
+            {
+              "key": "Connection",
+              "value": "Keep-Alive"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=UTF-8"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Location updated.\",\n    \"data\": {\n        \"id\": 23,\n        \"user_id\": 1,\n        \"name\": \"BUEP 2026\",\n        \"host\": \"example.com\",\n        \"port\": 8080,\n        \"protocol\": \"http\",\n        \"description\": \"test\",\n        \"is_active\": 1,\n        \"status\": \"unknown\",\n        \"last_checked\": null,\n        \"created_at\": \"2026-05-29 09:03:50\",\n        \"updated_at\": \"2026-05-29 09:04:03\"\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "Brisanje lokacije",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsIm5hbWUiOiJUb21pc2xhdiBGZWRlayIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3OTc4MDg5OSwiZXhwIjoxNzc5Nzg0NDk5fQ.8pcG4Q-P-4KacaiiH_rsfbOHwPcijXYDXZqhuOG2gL0",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/locations/21",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "locations",
+            "21"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Brisanje lokacije",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/locations/23",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "locations",
+                "23"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Date",
+              "value": "Fri, 29 May 2026 07:04:29 GMT"
+            },
+            {
+              "key": "Server",
+              "value": "Apache/2.4.56 (Unix) OpenSSL/1.1.1t PHP/8.2.4 mod_perl/2.0.12 Perl/v5.34.1"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "strict-origin-when-cross-origin"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "strict-origin-when-cross-origin"
+            },
+            {
+              "key": "Vary",
+              "value": "Authorization"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.2.4"
+            },
+            {
+              "key": "Expires",
+              "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-store, no-cache, must-revalidate"
+            },
+            {
+              "key": "Pragma",
+              "value": "no-cache"
+            },
+            {
+              "key": "Content-Security-Policy",
+              "value": "default-src 'self'; script-src 'self' 'nonce-JUPGrWUW2PxcKdrv8u6mwQ==' https://cdn.jsdelivr.net; style-src 'self' 'nonce-JUPGrWUW2PxcKdrv8u6mwQ==' https://cdn.jsdelivr.net https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net; img-src 'self' data: https:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';"
+            },
+            {
+              "key": "X-XSS-Protection",
+              "value": "1; mode=block"
+            },
+            {
+              "key": "Permissions-Policy",
+              "value": "geolocation=(), camera=(), microphone=()"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Access-Control-Allow-Methods",
+              "value": "GET, POST, PUT, DELETE, OPTIONS, PATCH"
+            },
+            {
+              "key": "Access-Control-Allow-Headers",
+              "value": "Authorization, Content-Type, X-CSRF-Token"
+            },
+            {
+              "key": "Content-Length",
+              "value": "77"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5, max=100"
+            },
+            {
+              "key": "Connection",
+              "value": "Keep-Alive"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=UTF-8"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Location deleted.\",\n    \"data\": null\n}"
+        }
+      ]
+    },
+    {
+      "name": "Provera lokacije",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsIm5hbWUiOiJUb21pc2xhdiBGZWRlayIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3OTc4MDg5OSwiZXhwIjoxNzc5Nzg0NDk5fQ.8pcG4Q-P-4KacaiiH_rsfbOHwPcijXYDXZqhuOG2gL0",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/locations/21/check",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "locations",
+            "21",
+            "check"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Provera lokacije - obrisane",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/locations/23/check",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "locations",
+                "23",
+                "check"
+              ]
+            }
+          },
+          "status": "Not Found",
+          "code": 404,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Date",
+              "value": "Fri, 29 May 2026 07:06:28 GMT"
+            },
+            {
+              "key": "Server",
+              "value": "Apache/2.4.56 (Unix) OpenSSL/1.1.1t PHP/8.2.4 mod_perl/2.0.12 Perl/v5.34.1"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "strict-origin-when-cross-origin"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "strict-origin-when-cross-origin"
+            },
+            {
+              "key": "Vary",
+              "value": "Authorization"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.2.4"
+            },
+            {
+              "key": "Expires",
+              "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-store, no-cache, must-revalidate"
+            },
+            {
+              "key": "Pragma",
+              "value": "no-cache"
+            },
+            {
+              "key": "Content-Security-Policy",
+              "value": "default-src 'self'; script-src 'self' 'nonce-9mAU/YQHbApXrOWqzxBETQ==' https://cdn.jsdelivr.net; style-src 'self' 'nonce-9mAU/YQHbApXrOWqzxBETQ==' https://cdn.jsdelivr.net https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net; img-src 'self' data: https:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';"
+            },
+            {
+              "key": "X-XSS-Protection",
+              "value": "1; mode=block"
+            },
+            {
+              "key": "Permissions-Policy",
+              "value": "geolocation=(), camera=(), microphone=()"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Access-Control-Allow-Methods",
+              "value": "GET, POST, PUT, DELETE, OPTIONS, PATCH"
+            },
+            {
+              "key": "Access-Control-Allow-Headers",
+              "value": "Authorization, Content-Type, X-CSRF-Token"
+            },
+            {
+              "key": "Content-Length",
+              "value": "62"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5, max=100"
+            },
+            {
+              "key": "Connection",
+              "value": "Keep-Alive"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=UTF-8"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": false,\n    \"message\": \"Location not found.\"\n}"
+        },
+        {
+          "name": "Provera lokacije - postojece",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/locations/12/check",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "locations",
+                "12",
+                "check"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Date",
+              "value": "Fri, 29 May 2026 07:06:45 GMT"
+            },
+            {
+              "key": "Server",
+              "value": "Apache/2.4.56 (Unix) OpenSSL/1.1.1t PHP/8.2.4 mod_perl/2.0.12 Perl/v5.34.1"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "strict-origin-when-cross-origin"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "strict-origin-when-cross-origin"
+            },
+            {
+              "key": "Vary",
+              "value": "Authorization"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.2.4"
+            },
+            {
+              "key": "Expires",
+              "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-store, no-cache, must-revalidate"
+            },
+            {
+              "key": "Pragma",
+              "value": "no-cache"
+            },
+            {
+              "key": "Content-Security-Policy",
+              "value": "default-src 'self'; script-src 'self' 'nonce-+dH+2V3/KX7o8Qu2RQKaKQ==' https://cdn.jsdelivr.net; style-src 'self' 'nonce-+dH+2V3/KX7o8Qu2RQKaKQ==' https://cdn.jsdelivr.net https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net; img-src 'self' data: https:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';"
+            },
+            {
+              "key": "X-XSS-Protection",
+              "value": "1; mode=block"
+            },
+            {
+              "key": "Permissions-Policy",
+              "value": "geolocation=(), camera=(), microphone=()"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Access-Control-Allow-Methods",
+              "value": "GET, POST, PUT, DELETE, OPTIONS, PATCH"
+            },
+            {
+              "key": "Access-Control-Allow-Headers",
+              "value": "Authorization, Content-Type, X-CSRF-Token"
+            },
+            {
+              "key": "Content-Length",
+              "value": "289"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5, max=100"
+            },
+            {
+              "key": "Connection",
+              "value": "Keep-Alive"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=UTF-8"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Host is reachable.\",\n    \"data\": {\n        \"location_id\": 12,\n        \"success\": true,\n        \"response_time\": 142.80000000000001136868377216160297393798828125,\n        \"error_message\": null,\n        \"checked_at\": \"2026-05-29T09:06:45+02:00\"\n    }\n}"
+        }
+      ]
+    }
+  ]
+}
