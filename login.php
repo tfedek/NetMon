@@ -10,6 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     csrf_check();
     //Honeypot provera
     if (!empty($_POST['website'])) {
+        error_log('HONEYPOT triggered from IP: ' . get_client_ip());
         header('Location: ' . APP_URL . '/login.php');
         exit;
     }
