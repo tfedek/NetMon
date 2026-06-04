@@ -11,7 +11,7 @@ html,body{background:var(--nm-bg);color:var(--nm-text);font-family:var(--nm-font
 .nm-navbar{background:var(--nm-surface);border-bottom:1px solid var(--nm-border);padding:.5rem 1.5rem;}
 .nm-navbar .nav-link{font-size:.85rem;transition:color .15s;}
 .nm-navbar .nav-link:hover{color:var(--nm-text)!important;}
-.nm-card{background:var(--nm-surface);border:1px solid var(--nm-border);border-radius:8px;padding:1.25rem;}
+.nm-card{background:var(--nm-surface);border:1px solid var(--nm-border);border-radius:6px;padding:1.25rem;}
 .nm-card-header{border-bottom:1px solid var(--nm-border);padding-bottom:.75rem;margin-bottom:1rem;}
 .nm-badge{display:inline-flex;align-items:center;gap:.35rem;font-size:.75rem;font-family:var(--nm-font-mono);padding:.2rem .55rem;border-radius:20px;font-weight:500;}
 .nm-badge-online{background:rgba(63,185,80,.15);color:var(--nm-green);border:1px solid rgba(63,185,80,.3);}
@@ -22,7 +22,7 @@ html,body{background:var(--nm-bg);color:var(--nm-text);font-family:var(--nm-font
 .nm-dot-offline{background:var(--nm-red);}
 .nm-dot-unknown{background:var(--nm-muted);}
 @keyframes pulse-green{0%,100%{box-shadow:0 0 4px var(--nm-green);}50%{box-shadow:0 0 10px var(--nm-green);}}
-.loc-card{background:var(--nm-surface);border:1px solid var(--nm-border);border-radius:8px;padding:1rem 1.2rem;transition:border-color .2s,transform .15s;}
+.loc-card{background:var(--nm-surface);border:1px solid var(--nm-border);border-radius:5px;padding:1rem 1.2rem;transition:border-color .2s,transform .15s;}
 .loc-card:hover{border-color:#444c56;transform:translateY(-1px);}
 .loc-card.online{border-left:3px solid var(--nm-green);}
 .loc-card.offline{border-left:3px solid var(--nm-red);}
@@ -48,7 +48,7 @@ html,body{background:var(--nm-bg);color:var(--nm-text);font-family:var(--nm-font
 .nm-table td{padding:.6rem .75rem;border-bottom:1px solid rgba(48,54,61,.5);color:var(--nm-text);vertical-align:middle;}
 .nm-table tr:last-child td{border-bottom:none;}
 .nm-table tr:hover td{background:rgba(255,255,255,.02);}
-.stat-box{background:var(--nm-surface);border:1px solid var(--nm-border);border-radius:8px;padding:.9rem 1.1rem;}
+.stat-box{background:var(--nm-surface);border:1px solid var(--nm-border);border-radius:5px;padding:.9rem 1.1rem;}
 .stat-box .stat-val{font-family:var(--nm-font-mono);font-size:1.75rem;font-weight:700;line-height:1;}
 .stat-box .stat-lbl{font-size:.78rem;color:var(--nm-muted);margin-top:.25rem;}
 .nm-alert{border-radius:6px;padding:.65rem 1rem;font-size:.875rem;border:1px solid;}
