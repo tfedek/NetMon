@@ -64,3 +64,6 @@ html,body{background:var(--nm-bg);color:var(--nm-text);font-family:var(--nm-font
 ::-webkit-scrollbar{width:6px;height:6px;}
 ::-webkit-scrollbar-track{background:var(--nm-bg);}
 ::-webkit-scrollbar-thumb{background:var(--nm-border);border-radius:3px;}
+input[name="website"] {
+  display: none !important;
+}

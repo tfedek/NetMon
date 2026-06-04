@@ -8,6 +8,11 @@ $error = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     csrf_check();
+    //Honeypot provera
+    if (!empty($_POST['website'])) {
+        header('Location: ' . APP_URL . '/login.php');
+        exit;
+    }
     $db    = Database::getInstance()->getConnection();
     $email = sanitize_email($_POST['email'] ?? '');
     $pass  = $_POST['password'] ?? '';
@@ -91,6 +96,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <?php endif; ?>
     <form method="POST" action="<?= APP_URL ?>/login.php" novalidate>
       <?= csrf_field() ?>
+        <input type="text" name="website" tabindex="-1" autocomplete="off" class=""
+               style="position:absolute!important;left:-9999px!important;top:-9999px!important;width:0!important;height:0!important;opacity:0!important;border:none!important;padding:0!important;margin:0!important;">
       <div class="mb-3">
         <label class="form-label" for="email">Email adresa</label>
         <div class="input-group">
