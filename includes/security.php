@@ -182,6 +182,24 @@ function json_die(int $code, string $message, mixed $data = null): never {
 function json_ok(mixed $data, string $message = 'OK', int $code = 200): never {
     json_response($code, ['success' => true, 'message' => $message, 'data' => $data]);
 }
+function is_email_pwned(string $email): bool {
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, 'https://haveibeenpwned.com/api/v3/breachedaccount/' . urlencode($email));
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_TIMEOUT, 5);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, [
+        'hibp-api-key: ' . HIBP_API_KEY,
+        'User-Agent: NetMon-BreachCheck'
+    ]);
+    $response = curl_exec($ch);
+    $code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    curl_close($ch);
+
+    return $code === 200;
+}
+
+
+
 //SSRF function is_private_ip(string $host): bool {
 //    // Resolve hostname to IP if needed
 //    $ip = filter_var($host, FILTER_VALIDATE_IP) ? $host : gethostbyname($host);
