@@ -30,13 +30,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $stmt->execute();
 
             #$sent = send_reset_email($email, $user['full_name'], $token);
+            /*Izmenjena linija da bi mogao da debug funkciju slanja email
+            komandom: tail -20 /Applications/XAMPP/xamppfiles/logs/php_error_log
+            */
             $sent = send_reset_email($email, $user['full_name'], $token);
             if (!$sent) {
                 error_log('MAIL FAILED for: ' . $email);
             } else {
                 error_log('MAIL SENT to: ' . $email);
             }
-            // Loguj neuspelo slanje u bazu (profesorov addEmailFailure pattern)
+            // Loguj neuspelo slanje emaila u bazu)
             if (!$sent) {
                 log_email_failure($db, (int)$user['id'],
                     "Reset email nije mogao biti poslat na: {$email}");
