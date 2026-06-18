@@ -197,8 +197,17 @@ function is_email_pwned(string $email): bool {
 
     return $code === 200;
 }
-
-
+//function is_disposable_email(string $email): bool {
+//    $ch = curl_init();
+//    curl_setopt($ch, CURLOPT_URL, 'https://apps.emaillistverify.com/api/verifyEmail?secret=' . ELV_API_KEY . '&email=' . urlencode($email));
+//    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+//    curl_setopt($ch, CURLOPT_TIMEOUT, 5);
+//    curl_setopt($ch, CURLOPT_USERAGENT, 'NetMon-EmailCheck');
+//    $response = trim(curl_exec($ch));
+//    curl_close($ch);
+//
+//    return in_array($response, ['disposable', 'spamtrap', 'invalid']);
+//}
 
 //SSRF function is_private_ip(string $host): bool {
 //    // Resolve hostname to IP if needed

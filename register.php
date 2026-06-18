@@ -18,7 +18,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $error = 'Ime mora biti između 2 i 100 karaktera.';
     } elseif (!validate_email($email)) {
         $error = 'Neispravna email adresa.';
-    } elseif (strlen($pass) < 8) {
+//    } elseif (is_disposable_email($email)) {
+//        $error = 'Privremeni email adrese nisu dozvoljene. Molimo koristite pravi email.';
+//    } elseif (strlen($pass) < 8) {
         $error = 'Lozinka mora imati najmanje 8 karaktera.';
     } elseif (!preg_match('/[A-Z]/', $pass) || !preg_match('/[0-9]/', $pass)) {
         $error = 'Lozinka mora sadržati najmanje jedno veliko slovo i jedan broj.';

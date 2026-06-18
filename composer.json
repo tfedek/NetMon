@@ -6,7 +6,10 @@
     "require": {
         "php": ">=8.1",
         "phpmailer/phpmailer": "^6.9",
-        "mobiledetect/mobiledetectlib": "^2.8"
+        "mobiledetect/mobiledetectlib": "^2.8",
+        "web-auth/webauthn-lib": "^5.3",
+        "spomky-labs/otphp": "^11.5",
+        "bacon/bacon-qr-code": "^3.1"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23"
